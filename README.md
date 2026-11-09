@@ -27,7 +27,7 @@ All eight coding solutions are implemented in a single TypeScript file:
 The following blog posts explain important TypeScript concepts covered in this assignment:
 
 1. **Blog Post 1:** [Type VS Interface](./type-vs-interface.md)
-2. **Blog Post 2:** [Typr Narrowing](./type-narrowing.md)
+2. **Blog Post 2:** [Type Narrowing](./type-narrowing.md)
 
 ## Technologies Used
 
