@@ -1,10 +1,10 @@
-                                        Core differences between type aliases and interface in Typescript
+#                                       Core differences between type aliases and interface in Typescript
 
-Introduction:
+## Introduction:
 
 Typescript has two powerful method to declare custom types. They are: (i) type aliases and (ii) interface. These two method helped developers a lot to make the data well-structured. Though this two method are similar but there are important differences. Understanding these differences will help a developer a lot for thier projects.  
 
-Description:
+## Description:
 
 (i). type alias:   A type alias can declare primitive type, union, tuple, intersection and also object. types can extend type with intersection(&).
 
@@ -62,6 +62,6 @@ const user: User = {
   age: 25
 };
 
-Conclusion: 
+## Conclusion: 
 
 Both type and interface are important in typescript.In object oriented structures, developers use interface for its merging power to extend the type. But if there are tuple,union,intersection,primitive things, developer use type. They both are using in different scenario and requirement. 
