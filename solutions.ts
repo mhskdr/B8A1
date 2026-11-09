@@ -4,3 +4,19 @@ const multiplyValue = (value: number, multiplier?: number): number => {
   }
   return value * multiplier;
 };
+
+
+type Input = string | number | boolean;
+type Output = string | number;
+
+const processValue = (value: Input): Output => {
+  if (typeof value === "string") {
+    return value.trim().toLowerCase();
+  } else if (typeof value === "number") {
+    return value * 10;
+  } else if (typeof value === "boolean") {
+    return value ? "Active" : "Inactive";
+  } else {
+    throw new Error("Invalid type");
+  }
+};
