@@ -8,7 +8,7 @@ const multiplyValue = (value: number, multiplier?: number): number => {
 type Input = string | number | boolean;
 type Output = string | number;
 
-const processValue = (value: Input): Output => {
+const processInput = (value: Input): Output => {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
   } else if (typeof value === "number") {
@@ -39,13 +39,13 @@ interface Course {
 }
 
 const getPopularCourses = (course: Course[], minStudents: number): Course[] => {
-  return course.filter((obj) => {
+  return course.filter((obj: Course): boolean => {
     return obj.isPublished === true && obj.students >= minStudents;
   });
 };
 
 const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
-  return items.map((item) => item[key]);
+  return items.map((item: T): T[K] => item[key]);
 };
 
 class Employee {
@@ -75,13 +75,15 @@ class Manager extends Employee {
 }
 
 const validateAgeAsync = (age: number): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    if (age < 18) {
-      reject(new Error("Access Denied: Must be 18 or older"));
-    } else {
-      setTimeout(() => {
-        resolve("Access Granted");
-      }, 1000);
-    }
-  });
+  return new Promise<string>(
+    (resolve: (value: string) => void, reject: (reason?: unknown) => void): void => {
+      if (age < 18) {
+        reject(new Error("Access Denied: Must be 18 or older"));
+      } else {
+        setTimeout((): void => {
+          resolve("Access Granted");
+        }, 1000);
+      }
+    },
+  );
 };
