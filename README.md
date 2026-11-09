@@ -40,8 +40,8 @@ project/
 │
 ├── solutions.ts
 ├── README.md
-├── blog-1.md
-└── blog-2.md
+├── type-vs-interface.md
+└── type-narrowing.md
 ```
 
 ## Author
