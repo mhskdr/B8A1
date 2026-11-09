@@ -39,9 +39,10 @@ The following blog posts explain important TypeScript concepts covered in this a
 project/
 │
 ├── solutions.ts
-├── README.md
+├── type-narrowing.md
 ├── type-vs-interface.md
-└── type-narrowing.md
+└── README.md
+
 ```
 
 ## Author
