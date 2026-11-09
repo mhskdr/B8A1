@@ -34,3 +34,19 @@ const formatCoordinate = (coordinate: Coordinate): string => {
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.flat();
 };
+
+
+interface Course {
+  title: string;
+  students: number;
+  isPublished: boolean;
+}
+
+const getPopularCourses = (
+  course: Course[],
+  minStudents: number,
+): Course[] => {
+  return course.filter((obj) => {
+    return obj.isPublished === true && obj.students >= minStudents;
+  });
+};
