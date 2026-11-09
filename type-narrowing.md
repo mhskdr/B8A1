@@ -11,7 +11,7 @@ Here are the practical examples of Narrowing using typeof, instanceof, and the i
 ### typeof -
 Most common narrowing technique is using typeof operator. In primitive type, this is so much useful.
 
-example:
+     Example:
 
 const employee = (data: string | number): void => {
   if (typeof data === "string") {
@@ -26,7 +26,7 @@ employee(3000);
 ### instanceof -
 The instanceof operator is used with classes and objects created from constructors.
 
-example:
+     Example:
 class Employee {
   salary() {
     console.log("Employee salary: $300");
@@ -52,7 +52,7 @@ showDetails(manager);
 ### in-
 The in operator checks whether a property exists in an object.
 
-example:
+     Example:
 class Employee {
   salary() {
     console.log("Employee salary: $300");
