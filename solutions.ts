@@ -20,3 +20,12 @@ const processValue = (value: Input): Output => {
     throw new Error("Invalid type");
   }
 };
+
+
+type Coordinate = readonly [number, number, string];
+
+const formatCoordinate = (coordinate: Coordinate): string => {
+  const [latitude, longitude, locationName] = coordinate;
+
+  return `Location: ${locationName} (${latitude}, ${longitude})`;
+};
